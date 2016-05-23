@@ -1,0 +1,49 @@
+#clock {
+  box-sizing: border-box;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  border: 6px solid black;
+  margin: 3em auto;
+  position: relative;
+  background: radial-gradient(#76eec6, #458b74);
+}
+#hourhand, #minutehand, #secondhand {
+  position: absolute;
+  background: black;
+  transform-origin: bottom center;
+  }
+
+#hourhand {
+  width: 18px;
+  height: 30%;
+  border-radius: 10px;
+  top: calc(50% - 30%);
+  left: calc(50% - 9px);  
+}
+#minutehand {
+  width: 9px;
+  height: 40%;
+  border-radius: 5px;
+  background: black;
+  border: 1px solid black;
+  top: calc(50% - 40%);
+  left: calc(50% - 4.5px);
+}
+#secondhand {
+  width: 4.5px;
+  height: 45%;
+  background: red;
+  top: calc(50% - 45%);
+  left: calc(50% - 2.25px);
+  border-radius: 2.5px;
+}
+#center {
+  width: 30px;
+  height: 30px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+}

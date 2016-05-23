@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+	<title>Clock</title>
+	<link rel="stylesheet" type="text/css" href="clock.css">
+</head>
+<body>
+  <div id="clock">
+    <div id="center"></div>
+    <span id="hourhand"></span>
+    <span id="minutehand"></span>
+    <span id="secondhand"></span>
+  </div>
+  <script type="text/javascript">
+  	var d = new Date(),
+hands = [secondhand,minutehand,hourhand],
+initDeg = [6*d.getSeconds(), 6*d.getMinutes(), 30*(d.getHours()%12) + d.getMinutes()/2];
+for (var i = 0; i < hands.length; i++) {
+  var stepper = i == 0 ? 60 : 0;
+  var animate = hands[i].animate([
+    { transform: 'rotate(' + initDeg[i] + 'deg)' },
+    { transform: 'rotate(' + (initDeg[i] + 360) + 'deg)' }
+  ], {
+    duration: 1000 * Math.pow(60, i + 1),
+    easing: 'steps(' + stepper + ', start)',
+    iterations: Infinity
+  });
+}
+
+  </script>
+</body>
+</html>

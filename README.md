@@ -1,2 +1,2 @@
 # Analog-Clock
-Simple analogue clock,youre welcome to make changes
+Simple analog clock,youre welcome to make changes
